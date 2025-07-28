@@ -1,0 +1,249 @@
+/* ======================
+   Fuente y colores base
+   ====================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  color: grey;
+}
+
+h1 {
+  border-bottom: 2px solid #8f3737;
+  text-align: center;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: grey;
+}
+
+/* ======================
+   Contenedores generales
+   ====================== */
+#results-container,
+#projects-container,
+#donations-container,
+#notifications,
+#carrito,
+#form-campania,
+#form-donacion,
+#form-evento {
+  width: 90%;
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ======================
+   Carrito de donaciones
+   ====================== */
+#carrito {
+  background-color: #fff8f0;
+  color: #5a2a00;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#carrito h2 {
+  border-bottom: 2px solid #f0f4f8;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+#carrito ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#carrito li {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-left: 6px solid #8f3737;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* ======================
+   Búsqueda de eventos
+   ====================== */
+.search-container {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #ebd2d2;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+#events {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #8f3737;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* ======================
+   Botones generales
+   ====================== */
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #8f3737;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #722b2b;
+}
+
+/* ======================
+   Elementos de listas de datos
+   ====================== */
+#projects-container div,
+#donations-container div,
+#results-container div {
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #8f3737;
+  border-radius: 6px;
+}
+
+/* ======================
+   Notificaciones emergentes
+   ====================== */
+#notifications div {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #e6ffed;
+  border: 1px solid #2ecc71;
+  border-left: 6px solid #27ae60;
+  border-radius: 6px;
+  color: #2c662d;
+  animation: fadein 0.5s ease-in-out;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======================
+   Formularios e inputs
+   ====================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form select option {
+  padding: 10px;
+}
+
+/* ======================
+   Botón Limpiar sesión
+   ====================== */
+.limpiar-sesion-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.limpiar-sesion-container button {
+  background-color: #8f3737;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.limpiar-sesion-container button:hover {
+  background-color: #722b2b;
+}
+/* ======================
+   Estilos tabla resumen de donaciones por proyecto
+   ====================== */
+.tabla-resumen {
+  width: 90%;
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.tabla-resumen h2 {
+  color: #5a2a00;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tabla-resumen table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabla-resumen th {
+  background-color: #8f3737;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #722b2b;
+  font-weight: bold;
+}
+
+.tabla-resumen td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+.tabla-resumen tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.tabla-resumen tbody tr:hover {
+  background-color: #eee;
+}
+
+.tabla-resumen p {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+}
+
+
+
+
+
