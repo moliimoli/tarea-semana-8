@@ -12,6 +12,8 @@ CREATE TABLE `proyecto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
+-- AGREGAR NUEVA TABLA
+
 -- organizacion.donante definition
 CREATE TABLE `donante` (
   `id_donante` int(11) NOT NULL AUTO_INCREMENT,
