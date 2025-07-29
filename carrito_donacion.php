@@ -5,10 +5,10 @@ if (!isset($_SESSION['carrito'])) {
     $_SESSION['carrito'] = [];
 }
 
-$campania = $_POST['campania'] ?? "";
-$monto = $_POST['monto'] ?? 0;
+$campania = filter_input(INPUT_POST, 'campania', FILTER_SANITIZE_STRING) ?? "";
+$monto = filter_input(INPUT_POST, 'monto', FILTER_VALIDATE_FLOAT);
 
-if ($campania !== "" && $monto > 0) {
+if ($campania !== "" && $monto !== false && $monto > 0) {
     $_SESSION['carrito'][] = [
         'campania' => $campania,
         'monto' => $monto
@@ -16,5 +16,5 @@ if ($campania !== "" && $monto > 0) {
 }
 
 header("Location: semana6.php");
-exit;
+exit();
 ?>
